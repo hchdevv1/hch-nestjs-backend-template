@@ -8,10 +8,8 @@ import configuration from './config/configuration';
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: '.env',
-      load: [configuration],
+      load: configuration,
     }),
   ],
-  controllers: [],
-  providers: [],
 })
 export class AppModule {}
