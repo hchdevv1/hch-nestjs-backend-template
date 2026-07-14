@@ -1,10 +1,12 @@
 import { NestFactory } from '@nestjs/core';
 import { ConfigService } from '@nestjs/config';
+import { WINSTON_MODULE_NEST_PROVIDER } from 'nest-winston';
 
 import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.useLogger(app.get(WINSTON_MODULE_NEST_PROVIDER));
 
   const configService = app.get(ConfigService);
 
@@ -12,7 +14,6 @@ async function bootstrap() {
 
   await app.listen(port);
 
-  console.log(`Application is running on: http://localhost:${port}`);
 }
 
 bootstrap();
