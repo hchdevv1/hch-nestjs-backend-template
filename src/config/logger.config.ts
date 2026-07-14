@@ -1,7 +1,7 @@
 import { registerAs } from '@nestjs/config';
 
 export default registerAs('logger', () => ({
-  appName: process.env.APP_NAME || 'HCH NestJS Backend Template',
+  appName: process.env.APP_NAME || 'HCH Backend',
 
   level: process.env.LOG_LEVEL || 'info',
 

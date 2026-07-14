@@ -1,13 +1,10 @@
 /* eslint-disable prettier/prettier */
 import appConfig from './app.config';
 import databaseConfig from './database.config';
-
 import loggerConfig from './logger.config';
 
-const configuration = [
+export default [
   appConfig,
- loggerConfig,
- databaseConfig,
+  loggerConfig,
+  databaseConfig,
 ];
-
-export default configuration;
