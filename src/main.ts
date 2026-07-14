@@ -6,6 +6,7 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+
   app.useLogger(app.get(WINSTON_MODULE_NEST_PROVIDER));
 
   const configService = app.get(ConfigService);
@@ -13,7 +14,6 @@ async function bootstrap() {
   const port = configService.get<number>('app.port', 3000);
 
   await app.listen(port);
-
 }
 
 bootstrap();
