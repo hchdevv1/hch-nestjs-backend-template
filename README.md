@@ -92,7 +92,210 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 - Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
 - Website - [https://nestjs.com](https://nestjs.com/)
 - Twitter - [@nestframework](https://twitter.com/nestframework)
+# Naming Convention
 
+## Folder
+
+ใช้ lowercase
+
+```text
+health/
+patient/
+doctor/
+line/
+his/
+common/
+config/
+database/
+```
+
+---
+
+## File
+
+ใช้
+
+```text
+<name>.<type>.ts
+```
+
+ตัวอย่าง
+
+```text
+patient.controller.ts
+patient.service.ts
+patient.module.ts
+patient.entity.ts
+patient.repository.ts
+patient.dto.ts
+patient.mapper.ts
+```
+
+---
+
+## Class
+
+ใช้ PascalCase
+
+```ts
+PatientController
+
+PatientService
+
+PatientEntity
+
+PatientRepository
+
+CreatePatientDto
+```
+
+---
+
+## Variable
+
+ใช้ camelCase
+
+```ts
+patientName
+
+createdAt
+
+updatedAt
+```
+
+---
+
+## Constant
+
+ใช้ UPPER_SNAKE_CASE
+
+```ts
+DEFAULT_PAGE_SIZE
+
+MAX_UPLOAD_SIZE
+```
+
+---
+
+## Environment
+
+ใช้ UPPER_SNAKE_CASE
+
+```text
+APP_NAME
+
+APP_PORT
+
+DB_HOST
+
+DB_PORT
+
+LOG_LEVEL
+```
+
+---
+
+## API
+
+Route
+
+```text
+GET /patients
+
+POST /patients
+
+GET /patients/:id
+```
+
+Response
+
+```json
+{
+  "success": true,
+  "message": "Request success",
+  "data": {}
+}
+```
+
+---
+
+## Database
+
+Table
+
+```text
+patients
+```
+
+Column
+
+```text
+patient_name
+
+created_at
+
+updated_at
+```
+
+Primary Key
+
+```text
+id BIGSERIAL
+```
+
+Entity
+
+```ts
+Patient
+```
+
+Repository
+
+```ts
+Repository<Patient>
+```
+
+Migration
+
+```text
+1752468000000-create-patients-table.ts
+```
+
+---
+
+## Git Branch
+
+```text
+main
+
+develop
+
+feature/patient
+
+bugfix/login
+
+hotfix/api
+```
+
+---
+
+## Git Commit
+
+Conventional Commit
+
+```text
+feat:
+
+fix:
+
+refactor:
+
+docs:
+
+test:
+
+chore:
+```
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
